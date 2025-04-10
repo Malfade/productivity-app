@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач - Задачи</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tasks.html" class="active">Задачи</a></li>
+                    <li><a href="timer.html">Таймер</a></li>
+                    <li><a href="stats.html">Статистика</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Управление задачами</h1>
+            
+            <div class="card">
+                <form id="taskForm" class="task-form">
+                    <div class="form-group">
+                        <input type="text" id="taskInput" placeholder="Введите новую задачу" required>
+                        <button type="submit">Добавить задачу</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <div id="taskList" class="task-list">
+                    <!-- Задачи будут добавлены через JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Менеджер задач</p>
+        </footer>
+    </div>
+
+    <script src="js/tasks.js"></script>
+</body>
+</html> 

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач - Профиль</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tasks.html">Задачи</a></li>
+                    <li><a href="timer.html">Таймер</a></li>
+                    <li><a href="stats.html">Статистика</a></li>
+                    <li><a href="profile.html" class="active">Профиль</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Настройки профиля</h1>
+            
+            <div class="card profile-card">
+                <form id="profileForm" class="profile-form">
+                    <div class="form-group">
+                        <label for="userName">Имя пользователя</label>
+                        <input type="text" id="userName" placeholder="Введите ваше имя" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="userQuote">Персональное сообщение</label>
+                        <textarea id="userQuote" placeholder="Введите вашу любимую цитату или девиз" rows="3"></textarea>
+                    </div>
+
+                    <button type="submit" class="save-btn">Сохранить</button>
+                </form>
+            </div>
+
+            <div class="card theme-card">
+                <h2>Настройки темы</h2>
+                <div class="theme-toggle">
+                    <span class="theme-label">Тёмная тема</span>
+                    <label class="switch">
+                        <input type="checkbox" id="themeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="card preview-card">
+                <h2>Предпросмотр профиля</h2>
+                <div class="profile-preview">
+                    <div id="previewName" class="preview-name"></div>
+                    <div id="previewQuote" class="preview-quote"></div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Менеджер задач</p>
+        </footer>
+    </div>
+
+    <script src="js/profile.js"></script>
+</body>
+</html> 

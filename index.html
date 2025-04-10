@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач - Главная</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="tasks.html">Задачи</a></li>
+                    <li><a href="timer.html">Таймер</a></li>
+                    <li><a href="stats.html">Статистика</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Добро пожаловать в Менеджер задач</h1>
+            <div id="userGreeting" class="greeting">
+                <!-- Приветствие будет добавлено через JavaScript -->
+            </div>
+            <div class="description">
+                <p>Планируйте свои задачи, используйте таймер Pomodoro и отслеживайте свой прогресс!</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Менеджер задач</p>
+        </footer>
+    </div>
+
+    <script>
+        // Получаем имя пользователя из localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const userName = localStorage.getItem('userName') || 'Гость';
+            const greetingElement = document.getElementById('userGreeting');
+            const hours = new Date().getHours();
+            let greeting = '';
+
+            if (hours >= 5 && hours < 12) {
+                greeting = 'Доброе утро';
+            } else if (hours >= 12 && hours < 18) {
+                greeting = 'Добрый день';
+            } else if (hours >= 18 && hours < 23) {
+                greeting = 'Добрый вечер';
+            } else {
+                greeting = 'Доброй ночи';
+            }
+
+            greetingElement.textContent = `${greeting}, ${userName}!`;
+        });
+    </script>
+</body>
+</html> 

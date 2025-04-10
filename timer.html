@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач - Pomodoro таймер</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tasks.html">Задачи</a></li>
+                    <li><a href="timer.html" class="active">Таймер</a></li>
+                    <li><a href="stats.html">Статистика</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Pomodoro Таймер</h1>
+            
+            <div class="card timer-card">
+                <div id="timerDisplay" class="timer-display">25:00</div>
+                <div id="timerStatus" class="timer-status">Работа</div>
+                
+                <div class="timer-controls">
+                    <button id="startBtn" class="timer-btn">Старт</button>
+                    <button id="pauseBtn" class="timer-btn" disabled>Пауза</button>
+                    <button id="resetBtn" class="timer-btn">Сброс</button>
+                </div>
+            </div>
+
+            <div class="card info-card">
+                <h2>О методе Pomodoro</h2>
+                <p>Техника Pomodoro - это метод управления временем, который помогает повысить продуктивность:</p>
+                <ul>
+                    <li>25 минут сфокусированной работы</li>
+                    <li>5 минут отдыха</li>
+                    <li>После 4 циклов - длинный перерыв (15-30 минут)</li>
+                </ul>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Менеджер задач</p>
+        </footer>
+    </div>
+
+    <audio id="timerSound" src="assets/sounds/timer-end.mp3"></audio>
+    <script src="js/timer.js"></script>
+</body>
+</html> 

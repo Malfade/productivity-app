@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач - Статистика</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="tasks.html">Задачи</a></li>
+                    <li><a href="timer.html">Таймер</a></li>
+                    <li><a href="stats.html" class="active">Статистика</a></li>
+                    <li><a href="profile.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Статистика задач</h1>
+            
+            <div class="stats-grid">
+                <div class="card stats-card">
+                    <h2>Общая статистика</h2>
+                    <div class="stats-summary">
+                        <div class="stat-item">
+                            <span class="stat-label">Всего задач:</span>
+                            <span id="totalTasks" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Выполнено:</span>
+                            <span id="completedTasks" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Активных:</span>
+                            <span id="activeTasks" class="stat-value">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card chart-card">
+                    <h2>Распределение задач</h2>
+                    <div class="chart-container">
+                        <canvas id="tasksChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Менеджер задач</p>
+        </footer>
+    </div>
+
+    <script src="js/stats.js"></script>
+</body>
+</html> 
